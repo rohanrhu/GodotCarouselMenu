@@ -1,0 +1,255 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlawg7jtga6r7"]
+
+[ext_resource type="Script" path="res://scenes/CarouselMenu/CarouselMenu.gd" id="1_w3mru"]
+[ext_resource type="Texture2D" uid="uid://b0jqgagxgdwiq" path="res://scenes/CarouselMenu/assets/gui/main/background.png" id="2_qhemk"]
+[ext_resource type="PackedScene" uid="uid://dyl0wuwreaqd2" path="res://scenes/CarouselMenu/CarouselMenuItem.tscn" id="3_0bai0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8cgwp"]
+
+[node name="CarouselMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w3mru")
+
+[node name="Background" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qhemk")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 150)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Top"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Top"
+
+[node name="Middle" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Placeholders" type="Control" parent="VBoxContainer/Middle"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.568627)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CarouselMenuItem1" parent="VBoxContainer/Middle/Placeholders" instance=ExtResource("3_0bai0")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0144444
+anchor_top = 0.412114
+anchor_right = 0.134444
+anchor_bottom = 0.578385
+offset_bottom = -1.56164e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="CarouselMenuItem2" parent="VBoxContainer/Middle/Placeholders" instance=ExtResource("3_0bai0")]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.113889
+anchor_top = 0.372922
+anchor_right = 0.332222
+anchor_bottom = 0.617577
+metadata/_edit_use_anchors_ = true
+
+[node name="CarouselMenuItem3" parent="VBoxContainer/Middle/Placeholders" instance=ExtResource("3_0bai0")]
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.242222
+anchor_top = 0.345606
+anchor_right = 0.485
+anchor_bottom = 0.647268
+offset_right = -1.83582e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="CarouselMenuItem4" parent="VBoxContainer/Middle/Placeholders" instance=ExtResource("3_0bai0")]
+z_index = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.360556
+anchor_top = 0.308789
+anchor_right = 0.647778
+anchor_bottom = 0.684085
+offset_right = -3.24249e-05
+offset_bottom = 1.88351e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="CarouselMenuItem5" parent="VBoxContainer/Middle/Placeholders" instance=ExtResource("3_0bai0")]
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.518333
+anchor_top = 0.357482
+anchor_right = 0.77
+anchor_bottom = 0.646081
+offset_left = -1.4782e-05
+offset_right = 1.95503e-05
+offset_bottom = 2.3365e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="CarouselMenuItem6" parent="VBoxContainer/Middle/Placeholders" instance=ExtResource("3_0bai0")]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.683889
+anchor_top = 0.374109
+anchor_right = 0.899444
+anchor_bottom = 0.619952
+offset_left = -2.71797e-05
+offset_right = -2.95639e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="CarouselMenuItem7" parent="VBoxContainer/Middle/Placeholders" instance=ExtResource("3_0bai0")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.88
+anchor_top = 0.409739
+anchor_right = 1.01333
+anchor_bottom = 0.583135
+offset_right = -9.91821e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="Items" type="Control" parent="VBoxContainer/Middle"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CarouselMenuItem1" parent="VBoxContainer/Middle/Items" instance=ExtResource("3_0bai0")]
+layout_mode = 1
+offset_left = 217.0
+offset_top = 47.0
+offset_right = -348.0
+offset_bottom = 2.0
+
+[node name="Label2" type="Label" parent="VBoxContainer/Middle/Items/CarouselMenuItem1"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 25
+text = "Item 1"
+
+[node name="CarouselMenuItem2" parent="VBoxContainer/Middle/Items" instance=ExtResource("3_0bai0")]
+layout_mode = 1
+offset_left = 217.0
+offset_top = 47.0
+offset_right = -348.0
+offset_bottom = 2.0
+
+[node name="Label2" type="Label" parent="VBoxContainer/Middle/Items/CarouselMenuItem2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 25
+text = "Item 2"
+
+[node name="Placements" type="Control" parent="VBoxContainer/Middle"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftButton" type="Button" parent="VBoxContainer/Middle"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.361111
+anchor_bottom = 1.0
+offset_right = 1.19209e-05
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8cgwp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8cgwp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8cgwp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8cgwp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8cgwp")
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="RightButton" type="Button" parent="VBoxContainer/Middle"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.648889
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8cgwp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8cgwp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8cgwp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8cgwp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8cgwp")
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Bottom" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 200)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Bottom"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.5
+offset_top = -11.5
+offset_right = 29.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Bottom"
+
+[connection signal="pressed" from="VBoxContainer/Middle/LeftButton" to="." method="_on_LeftButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/Middle/RightButton" to="." method="_on_RightButton_pressed"]

@@ -1,0 +1,140 @@
+[gd_scene load_steps=7 format=3 uid="uid://dyl0wuwreaqd2"]
+
+[ext_resource type="Script" path="res://scenes/CarouselMenu/CarouselMenuItem.gd" id="1_i85uo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_668uk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0m8a"]
+bg_color = Color(0.839216, 0.686275, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fa7i5"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5v3r"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sg6ki"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.839216, 0.686275, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="CarouselMenuItem" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_668uk")
+script = ExtResource("1_i85uo")
+
+[node name="CurrentLayer" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="LeftArrow" type="Control" parent="CurrentLayer"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_vertical = 2
+pivot_offset = Vector2(19, 21)
+
+[node name="TextureRect" type="Panel" parent="CurrentLayer/LeftArrow"]
+layout_mode = 0
+offset_left = -122.702
+offset_top = -11.5945
+offset_right = -82.7016
+offset_bottom = 28.4055
+rotation = 0.797615
+pivot_offset = Vector2(66.5933, 171.389)
+theme_override_styles/panel = SubResource("StyleBoxFlat_w0m8a")
+
+[node name="RightArrow" type="Control" parent="CurrentLayer"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -19.0
+offset_right = 18.0
+offset_bottom = 21.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(21, 21)
+
+[node name="TextureRect" type="Panel" parent="CurrentLayer/RightArrow"]
+layout_mode = 0
+offset_left = -122.702
+offset_top = -11.5945
+offset_right = -82.7016
+offset_bottom = 28.4055
+rotation = 0.797615
+pivot_offset = Vector2(66.5933, 171.389)
+theme_override_styles/panel = SubResource("StyleBoxFlat_w0m8a")
+
+[node name="Background" type="Control" parent="."]
+layout_mode = 2
+
+[node name="Base" type="PanelContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fa7i5")
+
+[node name="NotCurrent" type="PanelContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j5v3r")
+
+[node name="Current" type="PanelContainer" parent="Background"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sg6ki")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 25
+text = "Item"
